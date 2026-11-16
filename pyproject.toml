@@ -24,8 +24,8 @@ dependencies = [
 interpret = ["interpret>=0.6", "lime>=0.2"]
 # 04_counterfactuals.py
 counterfactuals = ["dice-ml>=0.11"]
-# 05_lrp.py
-lrp = ["torch>=2.2", "torchvision>=0.17"]
+# 05_lrp.py and the Assignment 2 notebooks (04-06)
+lrp = ["torch>=2.2", "torchvision>=0.17", "captum>=0.7"]
 # Running notebooks/ (03_deep_shap_mlp.ipynb needs torch)
 notebook = ["ipykernel>=6", "nbconvert>=7", "scipy>=1.11", "torch>=2.2"]
 # Linting and formatting
