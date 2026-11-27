@@ -13,14 +13,14 @@ from utils import DATA_DIR
 
 # Set GPU device
 print(torch.cuda.is_available())
-device = torch.device("cuda:0")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 # %% Load data
 TRAIN_ROOT = DATA_DIR / "brain_mri" / "training"
 TEST_ROOT = DATA_DIR / "brain_mri" / "testing"
 train_dataset = torchvision.datasets.ImageFolder(root=TRAIN_ROOT)
-test_dataset = torchvision.datasets.ImageFolder(root=TRAIN_ROOT)
+test_dataset = torchvision.datasets.ImageFolder(root=TEST_ROOT)
 
 
 # %% Building the model
